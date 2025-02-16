@@ -104,6 +104,26 @@ body {
 main {
   overflow: hidden;
 }
+main .number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99999;
+}
+main .number__line {
+  height: 8rem;
+  border: 1px solid #D1D1DF;
+}
+main .number__id {
+  border: 1px solid #D1D1DF;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 100rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAFAFA;
+}
 
 .section__one {
   margin-top: 3.2rem;
@@ -114,25 +134,6 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-.section__one .number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.section__one .number__line {
-  height: 8rem;
-  border: 1px solid #D1D1DF;
-}
-.section__one .number__id {
-  border: 1px solid #D1D1DF;
-  width: 5.6rem;
-  height: 5.6rem;
-  border-radius: 100rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FAFAFA;
 }
 .section__one-gallery {
   display: grid;
@@ -186,35 +187,17 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: -2.8rem;
+  position: relative;
+  background-color: #4D96A9;
+  z-index: -1;
   margin-bottom: 0;
 }
-.section__two .number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 60;
-}
-.section__two .number__line {
-  height: 8rem;
-  border: 1px solid #D1D1DF;
-}
-.section__two .number__id {
-  border: 1px solid #D1D1DF;
-  width: 5.6rem;
-  height: 5.6rem;
-  border-radius: 100rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FAFAFA;
-}
 .section__two-info {
-  margin-top: -9.2rem;
   padding: 6.4rem 0;
   color: #FAFAFA;
   position: relative;
   height: auto;
-  background-color: #4D96A9;
 }
 .section__two-info div {
   display: flex;
@@ -253,12 +236,14 @@ main {
 .section__two-info div button span {
   color: #D9B8FF;
 }
-.section__two-info::before {
+
+.section__two::before {
   content: "";
   background-image: url("../assets/mobile/image-footer.jpg");
   position: absolute;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: top center;
+  background-size: 100%;
   opacity: 0.1;
   z-index: 1;
   inset: 0;
