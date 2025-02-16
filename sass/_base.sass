@@ -6,33 +6,73 @@ $purple-600: #855FB1
 $purple-300: #D9B8FF
 $slate-900: #28283D
 $slate-600: #87879D
+$slate-300: #D1D1DF
 $white: #FAFAFA
 
 /* Mixins */
 
-@mixin text_base($size: 1.8rem, $height: 150%, $color: $slate-900, $weight: 500)
+@mixin text_base($size: 1.8rem, $height: 150%, $color: $slate-600, $weight: 500)
     font-size: $size
-    font-height: $height
+    line-height: $height
     font-weight: $weight
     color: $color
 
 @mixin text-preset-1
-    @include text_base($size: 6.4rem, $height: 110%, $color: $slate-900, $weight: 900)
+    @include text_base($size: 4rem, $height: 110%, $color: $slate-900, $weight: 900)
+    @media (width: 768px)
+        @include text_base($size: 6.4rem)
 
 @mixin text-preset-2
-    @include text_base($size: 4rem, $height: 110%, $color: $slate-900, $weight: 900)
+    @include text_base($size: 3.2rem, $height: 110%, $color: $slate-900, $weight: 900)
+    @media (width: 768px)
+        @include text_base($size: 4rem, $height: 110%, $color: $slate-900, $weight: 900)
 
 @mixin text-preset-3
-    @include text_base($size: 1.6rem, $height: 110%, $color: $cyan-600)
+    @include text_base($size: 1.2rem, $height: 110%, $color: $cyan-600, $weight: 900)
     letter-spacing: .3rem
     text-transform: uppercase
+    @media (width: 768px)
+        @include text_base($size: 1.6rem, $height: 110%, $color: $cyan-600, $weight: 900)
 
 @mixin text-preset-4
     @include text_base
 
 @mixin text-preset-5
     @include text_base($size: 1.8rem, $height: 150%, $color: $slate-900, $weight: 900)
-    
+
+@mixin button
+    padding: 1.6rem 4rem 1.4rem
+    border-radius: 8rem
+    border: none
+    @include text-preset-5
+    color: $white
+
+@mixin number
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__line   
+        height: 8rem
+        border: 1px solid $slate-300
+    &__id
+        border: 1px solid $slate-300
+        width: 5.6rem
+        height: 5.6rem
+        border-radius: 100rem
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $white
+
+@mixin section
+    margin-top: 3.2rem
+    margin-bottom: 6.4rem
+    display: flex
+    flex-direction: column
+    gap: 6.4rem
+    align-items: center
+    justify-content: center
+    text-align: center
     
 *
     padding: 0
@@ -42,8 +82,10 @@ $white: #FAFAFA
 html
     font-size: 10px
     font-family: 'Red Hat Display'
+    overflow-x: hidden 
 
 body
     @include text_base
+    overflow-x: hidden 
     
 
