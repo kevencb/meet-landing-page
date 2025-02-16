@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+/* Mixins */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Red Hat Display";
+}
+
+body {
+  font-size: 1.8rem;
+  font-height: 150%;
+  font-weight: 500;
+  color: #28283D;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap')
+
+$cyan-600: #4D96A9
+$cyan-300: #8FE3F9
+$purple-600: #855FB1
+$purple-300: #D9B8FF
+$slate-900: #28283D
+$slate-600: #87879D
+$white: #FAFAFA
+
+/* Mixins */
+
+@mixin text_base($size: 1.8rem, $height: 150%, $color: $slate-900, $weight: 500)
+    font-size: $size
+    font-height: $height
+    font-weight: $weight
+    color: $color
+
+@mixin text-preset-1
+    @include text_base($size: 6.4rem, $height: 110%, $color: $slate-900, $weight: 900)
+
+@mixin text-preset-2
+    @include text_base($size: 4rem, $height: 110%, $color: $slate-900, $weight: 900)
+
+@mixin text-preset-3
+    @include text_base($size: 1.6rem, $height: 110%, $color: $cyan-600)
+    letter-spacing: .3rem
+    text-transform: uppercase
+
+@mixin text-preset-4
+    @include text_base
+
+@mixin text-preset-5
+    @include text_base($size: 1.8rem, $height: 150%, $color: $slate-900, $weight: 900)
+    
+    
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-size: 10px
+    font-family: 'Red Hat Display'
+
+body
+    @include text_base
+    
+
