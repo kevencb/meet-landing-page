@@ -3,7 +3,6 @@
 .container
     width: min(85%, 40rem)
     margin: 0 auto
-
 .header
     display: flex
     flex-direction: column
@@ -15,7 +14,11 @@
         margin-top: 6.4rem
         margin-bottom: 4.8rem
         img
-            height: 16rem
+            width: 85%
+            display: block
+            margin: 0 auto
+            @media (min-width: 768px)
+                width: 100%
     &__info
         display: flex
         flex-direction: column

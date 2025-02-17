@@ -19,8 +19,8 @@ $white: #FAFAFA
 
 @mixin text-preset-1
     @include text_base($size: 4rem, $height: 110%, $color: $slate-900, $weight: 900)
-    @media (width: 768px)
-        @include text_base($size: 6.4rem)
+    @media (min-width: 768px)
+        @include text_base($size: 4.8rem, $height: 110%, $color: $slate-900, $weight: 900)
 
 @mixin text-preset-2
     @include text_base($size: 3.2rem, $height: 110%, $color: $slate-900, $weight: 900)
@@ -31,7 +31,7 @@ $white: #FAFAFA
     @include text_base($size: 1.2rem, $height: 110%, $color: $cyan-600, $weight: 900)
     letter-spacing: .3rem
     text-transform: uppercase
-    @media (width: 768px)
+    @media (min-width: 768px)
         @include text_base($size: 1.6rem, $height: 110%, $color: $cyan-600, $weight: 900)
 
 @mixin text-preset-4

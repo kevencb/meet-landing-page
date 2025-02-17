@@ -39,7 +39,14 @@ body {
   margin-bottom: 4.8rem;
 }
 .header__hero img {
-  height: 16rem;
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .header__hero img {
+    width: 100%;
+  }
 }
 .header__info {
   display: flex;
@@ -55,12 +62,12 @@ body {
   font-weight: 900;
   color: #28283D;
 }
-@media (width: 768px) {
+@media (min-width: 768px) {
   .header__info-title {
-    font-size: 6.4rem;
-    line-height: 150%;
-    font-weight: 500;
-    color: #87879D;
+    font-size: 4.8rem;
+    line-height: 110%;
+    font-weight: 900;
+    color: #28283D;
   }
 }
 .header__info-descriptipon {
@@ -154,7 +161,7 @@ main .number__id {
   display: block;
   margin-bottom: 1.6rem;
 }
-@media (width: 768px) {
+@media (min-width: 768px) {
   .section__one-info span {
     font-size: 1.6rem;
     line-height: 110%;
