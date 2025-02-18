@@ -34,8 +34,8 @@ html
 
 @mixin text-preset-2
     @include text_base($size: 3.2rem, $height: 110%, $color: $slate-900, $weight: 900)
-    @media (width: 768px)
-        @include text_base($size: 4rem, $height: 110%, $color: $slate-900, $weight: 900)
+    @media (min-width: 768px)
+        font-size: 3.6rem
 
 @mixin text-preset-3
     @include text_base($size: 1.2rem, $height: 110%, $color: $cyan-600, $weight: 900)
@@ -75,7 +75,6 @@ html
         background-color: $white
 
 @mixin section
-    margin-top: 3.2rem
     margin-bottom: 6.4rem
     display: flex
     flex-direction: column
