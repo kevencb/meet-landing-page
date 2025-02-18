@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
-/* Mixins */
 * {
   padding: 0;
   margin: 0;
@@ -12,6 +11,7 @@ html {
   overflow-x: hidden;
 }
 
+/* Mixins */
 body {
   font-size: 1.8rem;
   line-height: 150%;
@@ -28,17 +28,21 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  background-color: aqua;
+  align-items: center;
 }
 .header__logo {
+  width: 11.8rem;
   margin-top: 4.8rem;
+  display: block;
 }
 .header__hero {
   margin-top: 6.4rem;
   margin-bottom: 4.8rem;
 }
 .header__hero img {
+  background-color: red;
   width: 85%;
   display: block;
   margin: 0 auto;
@@ -81,6 +85,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.6rem;
+}
+@media (min-width: 768px) {
+  .header__info-actions {
+    flex-direction: row;
+  }
 }
 .header__info-actions .action-download {
   padding: 1.6rem 4rem 1.4rem;

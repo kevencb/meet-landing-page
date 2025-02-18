@@ -9,6 +9,16 @@ $slate-600: #87879D
 $slate-300: #D1D1DF
 $white: #FAFAFA
 
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-size: 10px
+    font-family: 'Red Hat Display'
+    overflow-x: hidden 
+
 /* Mixins */
 
 @mixin text_base($size: 1.8rem, $height: 150%, $color: $slate-600, $weight: 500)
@@ -74,15 +84,6 @@ $white: #FAFAFA
     justify-content: center
     text-align: center
     
-*
-    padding: 0
-    margin: 0
-    box-sizing: border-box
-
-html
-    font-size: 10px
-    font-family: 'Red Hat Display'
-    overflow-x: hidden 
 
 body
     @include text_base
