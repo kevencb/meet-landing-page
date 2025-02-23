@@ -1,0 +1,147 @@
+@use "base" as *
+
+// .container
+//     width: min(85%, 112rem)
+//     margin: 0 auto
+
+.header
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__logo
+        width: 11.8rem
+        margin: 4.8rem auto 0
+        display: block
+    &__hero
+        margin-top: 6.4rem
+        margin-bottom: 4.8rem
+        @media (min-width: 768px)
+            margin-bottom: 7.2rem
+        img
+            width: 85%
+            display: block
+            margin: 0 auto
+            @media (min-width: 768px)
+                width: 100%
+    &__info
+        width: 85%
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        gap: 2.4rem
+        @media (min-width: 768px)
+            width: 44rem
+        &-title
+            @include text-preset-1
+        &-descriptipon
+            @include text-preset-4
+        &-actions
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 1.6rem
+            @media (min-width: 768px)
+                flex-direction: row
+            .action-download
+                @include button
+                background-color: $cyan-600
+                span
+                    color: $cyan-300
+            .action-ask
+                @include button
+                background-color: $purple-600
+
+.header
+    display: grid
+    background-color: aqua
+    img
+        width: 118px
+    &__hero
+        display: grid
+        grid-template-columns: repeat(3, max-content)
+        align-items: center
+        justify-content: space-between
+        // gap: 127px
+        .left
+            width: 100%
+        .right
+            width: 100%
+
+
+main
+    overflow: hidden
+    .number
+        @include number
+        z-index: 99999
+
+.section__one
+    @include section
+    margin-top: 6.4rem
+    @media (min-width: 768px)
+        margin-top: 12.8rem
+    &-gallery
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 1.6rem
+        width: 85%
+        @media (min-width: 768px)
+            grid-template-columns: repeat(4, 1fr)
+        img
+            width: 100%
+            border-radius: .8rem
+    &-info
+        width: 85%
+        @media (min-width: 768px)
+            width: 40rem
+        span
+            @include text-preset-3
+            display: block
+            margin-bottom: 1.6rem
+        h2
+            @include text-preset-2
+            margin-bottom: 3.2rem
+
+.section__two
+    @include section
+    margin-top: -2.8rem
+    position: relative
+    background-color: $cyan-600
+    z-index: -1
+    margin-bottom: 0
+    &-info
+        padding: 6.4rem 0
+        color: $white
+        position: relative
+        height: auto
+        div
+            width: 85%
+            margin: 0 auto
+            @media (min-width: 768px)
+                width: 50rem
+            display: flex
+            flex-direction: column
+            gap: 2.4rem
+            align-items: center
+            z-index: 50
+            position: relative
+            h2
+                @include text-preset-2
+                color: $white
+            button
+                @include button
+                background-color: $purple-600
+                span
+                    color: $purple-300
+
+.section__two::before
+    content: ""
+    background-image: url("../assets/mobile/image-footer.jpg")
+    position: absolute
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: 100%
+    opacity: .1
+    z-index: 1
+    inset: 0
+      

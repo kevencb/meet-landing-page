@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -20,80 +21,78 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Red Hat Display";
+  overflow-x: hidden;
+}
+
 .header {
+  background-color: tomato;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 4.8rem;
+  margin-bottom: 3.2rem;
 }
 .header__logo {
   width: 11.8rem;
-  margin: 4.8rem auto 0;
-  display: block;
-}
-.header__hero {
-  margin-top: 6.4rem;
-  margin-bottom: 4.8rem;
-}
-@media (min-width: 768px) {
-  .header__hero {
-    margin-bottom: 7.2rem;
-  }
-}
-.header__hero img {
-  width: 85%;
-  display: block;
   margin: 0 auto;
 }
-@media (min-width: 768px) {
-  .header__hero img {
-    width: 100%;
-  }
-}
-.header__info {
-  width: 85%;
+.header__hero {
+  background-color: aqua;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.header__hero-left img {
+  width: 110%;
+  left: 5%;
+  transform: translateX(-5%);
+}
+.header__hero-info {
   text-align: center;
-  gap: 2.4rem;
 }
-@media (min-width: 768px) {
-  .header__info {
-    width: 44rem;
-  }
-}
-.header__info-title {
+.header__hero-info h1 {
   font-size: 4rem;
   line-height: 110%;
   font-weight: 900;
   color: #28283D;
 }
 @media (min-width: 768px) {
-  .header__info-title {
+  .header__hero-info h1 {
     font-size: 4.8rem;
     line-height: 110%;
     font-weight: 900;
     color: #28283D;
   }
 }
-.header__info-descriptipon {
+.header__hero-info p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 500;
   color: #87879D;
 }
-.header__info-actions {
+.header__hero-info div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.6rem;
 }
 @media (min-width: 768px) {
-  .header__info-actions {
+  .header__hero-info div {
     flex-direction: row;
   }
 }
-.header__info-actions .action-download {
+.header__hero-info div .action-download {
   padding: 1.6rem 4rem 1.4rem;
   border-radius: 8rem;
   border: none;
@@ -104,10 +103,10 @@ body {
   color: #FAFAFA;
   background-color: #4D96A9;
 }
-.header__info-actions .action-download span {
+.header__hero-info div .action-download span {
   color: #8FE3F9;
 }
-.header__info-actions .action-ask {
+.header__hero-info div .action-ask {
   padding: 1.6rem 4rem 1.4rem;
   border-radius: 8rem;
   border: none;
@@ -118,190 +117,6 @@ body {
   color: #FAFAFA;
   background-color: #855FB1;
 }
-
-.header {
-  display: grid;
-  background-color: aqua;
-}
-.header img {
-  width: 118px;
-}
-.header__hero {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  align-items: center;
-  justify-content: space-between;
-}
-.header__hero .left {
-  width: 100%;
-}
-.header__hero .right {
-  width: 100%;
-}
-
-main {
-  overflow: hidden;
-}
-main .number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 99999;
-}
-main .number__line {
-  height: 8rem;
-  border: 1px solid #D1D1DF;
-}
-main .number__id {
-  border: 1px solid #D1D1DF;
-  width: 5.6rem;
-  height: 5.6rem;
-  border-radius: 100rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FAFAFA;
-}
-
-.section__one {
-  margin-bottom: 6.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 6.4rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 6.4rem;
-}
-@media (min-width: 768px) {
-  .section__one {
-    margin-top: 12.8rem;
-  }
-}
-.section__one-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.6rem;
-  width: 85%;
-}
-@media (min-width: 768px) {
-  .section__one-gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-.section__one-gallery img {
-  width: 100%;
-  border-radius: 0.8rem;
-}
-.section__one-info {
-  width: 85%;
-}
-@media (min-width: 768px) {
-  .section__one-info {
-    width: 40rem;
-  }
-}
-.section__one-info span {
-  font-size: 1.2rem;
-  line-height: 110%;
-  font-weight: 900;
-  color: #4D96A9;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 1.6rem;
-}
-@media (min-width: 768px) {
-  .section__one-info span {
-    font-size: 1.6rem;
-    line-height: 110%;
-    font-weight: 900;
-    color: #4D96A9;
-  }
-}
-.section__one-info h2 {
-  font-size: 3.2rem;
-  line-height: 110%;
-  font-weight: 900;
-  color: #28283D;
-  margin-bottom: 3.2rem;
-}
-@media (min-width: 768px) {
-  .section__one-info h2 {
-    font-size: 3.6rem;
-  }
-}
-
-.section__two {
-  margin-bottom: 6.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 6.4rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: -2.8rem;
-  position: relative;
-  background-color: #4D96A9;
-  z-index: -1;
-  margin-bottom: 0;
-}
-.section__two-info {
-  padding: 6.4rem 0;
-  color: #FAFAFA;
-  position: relative;
-  height: auto;
-}
-.section__two-info div {
-  width: 85%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-  align-items: center;
-  z-index: 50;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .section__two-info div {
-    width: 50rem;
-  }
-}
-.section__two-info div h2 {
-  font-size: 3.2rem;
-  line-height: 110%;
-  font-weight: 900;
-  color: #28283D;
-  color: #FAFAFA;
-}
-@media (min-width: 768px) {
-  .section__two-info div h2 {
-    font-size: 3.6rem;
-  }
-}
-.section__two-info div button {
-  padding: 1.6rem 4rem 1.4rem;
-  border-radius: 8rem;
-  border: none;
-  font-size: 1.8rem;
-  line-height: 150%;
-  font-weight: 900;
-  color: #28283D;
-  color: #FAFAFA;
-  background-color: #855FB1;
-}
-.section__two-info div button span {
-  color: #D9B8FF;
-}
-
-.section__two::before {
-  content: "";
-  background-image: url("../assets/mobile/image-footer.jpg");
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100%;
-  opacity: 0.1;
-  z-index: 1;
-  inset: 0;
+.header .header__hero-right {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
